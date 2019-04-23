@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.doss.framework.mapper.RecordsMapper">
+    <select id="getRecordById" resultType="com.doss.framework.bean.Records">
+        select * from records where id=#{id}
+    </select>
+    <insert id="insertRecords" useGeneratedKeys="true" keyProperty="id">
+        insert into records (rec_num, rtype, subject, rnumber, detail, comm, create_time, create_user)
+        values (#{recNum}, #{rtype}, #{subject}, #{rNumber}, #{detail}, #{comm}, #{createTime}, #{createUser})
+    </insert>
+</mapper>
