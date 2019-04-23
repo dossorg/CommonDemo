@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>msg页面</title>
+</head>
+<body>
+<h1>msg页面</h1>
+<!--将div里的文本内容设置为制定的值-->
+<div th:text="${hello}">这里显示欢迎信息</div>
+<div th:utext="${hello}"></div>
+<hr/>
+
+<h4 th:text="${user}" th:each="user: ${users}"></h4>
+<hr/>
+
+<tr th:text="${user}" th:each="user: ${users}">
+</tr>
+<hr/>
+
+<h4>
+<span th:each="user: ${users}">[[${user}]]</span>
+</h4>
+
+</body>
+</html>
