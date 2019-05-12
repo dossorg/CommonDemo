@@ -11,6 +11,8 @@ public class Records {
     private Double rNumber;
     private String detail;
     private String comm;
+    private Integer payUserId;
+    private User payUser;
     private Date createTime;
     private String createUser;
 
@@ -84,5 +86,21 @@ public class Records {
 
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
+    }
+
+    public Integer getPayUserId() {
+        return payUserId;
+    }
+
+    public void setPayUserId(Integer payUserId) {
+        this.payUserId = payUserId;
+    }
+
+    public User getPayUser() {
+        return payUser;
+    }
+
+    public void setPayUser(User payUser) {
+        this.payUser = payUser;
     }
 }

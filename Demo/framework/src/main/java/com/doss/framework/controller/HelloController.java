@@ -20,7 +20,7 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/helloU")
-    public String helloUser(@RequestParam("user") String user) {
+    public String helloUser(@RequestParam("users") String user) {
         return "Hello " + user;
     }
 }

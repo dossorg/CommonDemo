@@ -12,6 +12,7 @@ public class MyBatisConfig {
         return new ConfigurationCustomizer() {
             @Override
             public void customize(org.apache.ibatis.session.Configuration configuration) {
+                //匹配下划线至驼峰规则
                 configuration.setMapUnderscoreToCamelCase(true);
             }
         };
