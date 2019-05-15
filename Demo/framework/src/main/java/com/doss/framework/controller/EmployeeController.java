@@ -2,10 +2,8 @@ package com.doss.framework.controller;
 
 
 import com.doss.framework.bean.Employee;
-import com.doss.framework.bean.EmployeeBO;
 import com.doss.framework.dao.DepartmentDao;
 import com.doss.framework.dao.EmployeeDao;
-import com.doss.framework.entities.Department;
 //import com.doss.framework.entities.Employee;
 import com.doss.framework.mapper.DepartmentMapper;
 import com.doss.framework.mapper.EmployeeMapper;

@@ -36,7 +36,7 @@ public class RecordsController {
 
     @GetMapping("/user/{id}")
     public User getUser(@PathVariable("id") Integer id) {
-        return userMapper.findUserById(id);
+        return userMapper.findById(id);
     }
 
     @GetMapping("/user")

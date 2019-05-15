@@ -17,15 +17,13 @@ public interface EmployeeMapper {
     @Update("update employee set last_name=#{lastName}, gender=#{gender}, email=#{email}, dept_id=#{deptId}, birthday=#{birthday} where id=#{id}")
     public int udpate(Employee employee);
 
+    //使用@Result 与department形成一对一映射
     @Select("select * from employee e where e.id=#{id}")
     @Results({
             @Result(property = "department", column = "dept_id", one = @One(select="com.doss.framework.mapper.DepartmentMapper.findById")),
             @Result(property = "deptId", column = "dept_id")
     })
     public Employee findById(Integer id);
-
-
-
 
     @Select("select * from employee e")
     @Results({

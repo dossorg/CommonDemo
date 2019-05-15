@@ -3,10 +3,12 @@ package com.doss.framework.mapper;
 import com.doss.framework.bean.User;
 import org.apache.ibatis.annotations.*;
 
+import java.util.Collection;
+
 public interface UserMapper {
 
     @Select("select * from users where id=#{id}")
-    public User findUserById(Integer id);
+    public User findById(Integer id);
 
     @Select("delete from users where id=#{id}")
     public int deleteUserById(Integer id);
@@ -24,4 +26,6 @@ public interface UserMapper {
     @Select("select u.* from users u where u.login_name=#{loginName} and u.password=#{password}")
     public User login2(String loginName, String password);
 
+    @Select("select * from users")
+    public Collection<User> getAll();
 }
